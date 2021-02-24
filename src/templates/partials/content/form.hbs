@@ -1,0 +1,56 @@
+<h2>RSVP</h2>
+<div  class="form" id="rsvpForm">
+    <form>
+        <fieldset>
+            <div id="guestName">
+                <p><label for="name" class="form-label">Guest Name:</label></p>
+                <p><input id="name" type="text" class="form-input" /></p>
+                <p><label for="name" class="form-error" id="nameError">Please enter a name.</label></p>
+            </div>
+            <div id="willAttend">
+                <p>
+                    <input name="willAttend" value="yes" type="radio" id="attendYes" /><label for="attendYes"  class="form-label--radio"> will </label>
+                    <input name="willAttend" value="no" type="radio" id="attendNo" /><label for="attendNo"  class="form-label--radio"> will not attend</label>
+                    <p><label for="willAttend" class="form-error" id="willAttendError">Please choose one.</label></p>
+                </p>
+            </div>
+            <div id="menuChoice" class="hidden">
+                <p><label for="entreeType" class="form-label">Entree:</label></p>
+                <p>
+                    <input name="entreeType" type="radio" value="the filet" id="meat" />
+                    <label for="meat" class="form-label--radio">
+                    <span>Grilled Black Angus Filet Mignon</span>
+                    <p class="form-label--desc">Yukon gold potato purée, Asparagus, Roquefort sauce</p>
+                    </label>
+                </p>
+                <p>
+                    <input name="entreeType" type="radio" value="the crab cake" id="fish" />
+                    <label for="fish" class="form-label--radio">
+                        <span>Jumbo Lump Crab Cake</span>
+                        <p class="form-label--desc">Wild watercress, mango salsa, dill Pernod sauce</p>
+                    </label>
+                </p>
+                <p>
+                    <input name="entreeType" type="radio" value="the pasta" id="pasta" />
+                    <label for="pasta" class="form-label--radio">
+                        <span>Primavera pasta</span>
+                        <p class="form-label--desc">House Made Pappardelle pasta, asparagus, green peas, zucchini, yellow squash, with cream sauce</p>
+                    </label>
+                </p>
+                <p><label for="entreeType" class="form-error" id="entreeTypeError">Please select an entree.</label></p>
+            </div>
+        </fieldset>
+        <div class="form-buttons">
+            <button type="button" name="review" id="reviewEntries">Review</button>
+            <button type="button" name="add-another" id="addAnother">Add another guest</button>
+            <button type="button" name="cancel" id="cancel">Cancel</button>
+        </div>
+    </form>
+</div>
+<div id="currentEntries"></div>
+<p><button type="button" name="add-guest" id="addGuest">Add guest</button></p>
+<p><button type="button" name="remove-guest" id="removeGuest">Remove</button></p>
+<form id="submitGuests">
+    <input type="hidden" id="guests" />
+    <button id="submit" type="submit" value="Submit" class="button-submit" />Submit</button>
+</form>
